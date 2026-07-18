@@ -1,4 +1,5 @@
 import Button from "./Button";
+import './Parentof.css';
 
 function Parentof() {
   function handleSave() {
@@ -14,7 +15,7 @@ function Parentof() {
   }
 
   return (
-    <div>
+    <div className="parentof-container">
       <Button text="Save" onClick={handleSave} />
       <Button text="Delete" onClick={handleDelete} />
       <Button text="Update" onClick={handleUpdate} />

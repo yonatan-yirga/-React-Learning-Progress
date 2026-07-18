@@ -1,17 +1,20 @@
 import ProductCard from "./ProductCard";
 import products from "../data/products";
+import './Parent.css';
 
 function Parent() {
   return (
-    <div>
+    <div className="parent-container">
       <h1>Products</h1>
 
-      {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          product={product}
-        />
-      ))}
+      <div className="products-grid">
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+          />
+        ))}
+      </div>
     </div>
   );
 }

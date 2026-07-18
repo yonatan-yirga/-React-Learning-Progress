@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
 import Usecallbackchild from "./Usecallbackchild";
+import './Usecallbackall.css';
 
 function Usecallbackall() {
    const [cart, setCart] = useState([]);
@@ -15,28 +16,30 @@ function Usecallbackall() {
   }, []);
 
   return (
-    <div>
+    <div className="usecallback-container">
       <h1>Products</h1>
 
-      {products.map((product) => (
-        <Usecallbackchild
-          key={product.id}
-          product={product}
-          youn={addToCart}
-        />
-      ))}
+      <div className="products-list">
+        {products.map((product) => (
+          <Usecallbackchild
+            key={product.id}
+            product={product}
+            youn={addToCart}
+          />
+        ))}
+      </div>
 
-      <hr />
+      <div className="cart-section">
+        <h2>Shopping Cart</h2>
 
-      <h2>Shopping Cart</h2>
-
-      {cart.map((item, index) => (
-        <div key={index}>
-          <p>
-            {item.title} - ${item.price}
-          </p>
-        </div>
-      ))}
+        {cart.map((item, index) => (
+          <div key={index} className="cart-item">
+            <p>
+              {item.title} - ${item.price}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

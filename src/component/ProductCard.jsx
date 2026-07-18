@@ -1,10 +1,11 @@
 
+import './ProductCard.css';
 
 function ProductCard({product}) {
   return (
-    <div>
+    <div className="product-card">
       <h3>{product.name}</h3>
-      <p style={{ color: 'blue'}}>  price is${product.price.toFixed(2)}</p>
+      <p>price is ${product.price.toFixed(2)}</p>
     </div>
   )
 }

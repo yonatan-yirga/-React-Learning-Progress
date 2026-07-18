@@ -1,9 +1,11 @@
-import Button from './Button'
+import Button from './Button';
+import './Sample.css';
 
 function Sample() {
   return (
-    <div>Sample
-        <Button text="Save" onClick={() => alert("Save clicked")} />
+    <div className="sample-container">
+      <span>Sample</span>
+      <Button text="Save" onClick={() => alert("Save clicked")} />
     </div>
   )
 }
