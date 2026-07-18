@@ -3,11 +3,15 @@ import Parent from './component/Parent'
 import Sample from './component/Sample'
 import Button from './component/Button'
 import Count from './State/Count'
+import UseEffect from './State/UseEffect'
+import Login from './State/Login'
 function App() {
 
   return (
     <>
-     <h1>Welcome to Rect</h1>
+    <Login/>
+     <h1>Welcome to React</h1>
+     <UseEffect/>
      <Count/>
      <Sample/>
      <Parent/>
