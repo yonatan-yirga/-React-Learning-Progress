@@ -8,11 +8,14 @@ import Login from './State/Login'
 import Usecallbackall from './State/Usecallbackall'
 import Userprovider from "./State/Userprovider";
 import Users from "./State/Users";
+import Poster from './State/Poster'
 
 function App() {
   return (
     <div className="app-container">
+      
       <div className="app-header">
+        <Poster />
         <h1>Welcome to React</h1>
       </div>
 
