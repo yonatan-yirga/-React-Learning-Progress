@@ -1,0 +1,38 @@
+.callback-child {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+.callback-child:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.callback-child h3 {
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.callback-child p {
+  color: #666;
+  margin: 5px 0;
+}
+
+.callback-child button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.callback-child button:hover {
+  background-color: #218838;
+}
