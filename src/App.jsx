@@ -3,16 +3,55 @@ import Parent from './component/Parent'
 import Sample from './component/Sample'
 import Button from './component/Button'
 import Count from './State/Count'
-import UseEffect from './State/UseEffect'
-import Login from './State/Login'
 import Usecallbackall from './State/Usecallbackall'
 import Userprovider from "./State/Userprovider";
 import Users from "./State/Users";
 import Poster from './State/Poster'
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
+import Loader from './component/Loader'
+const Home = lazy(() => import('../Lazyloading/Home'));
+const Profile = lazy(() => import('../Lazyloading/Profile'));
+import Portalsshow from './Portals/Portalsshow'
+import ProtectedRoute from './authentication/ProtectedRoute';
+import Dashboard from './authentication/Dashboard';
+import LoginPage  from './authentication/LoginPage'
 function App() {
   return (
     <div className="app-container">
+
+<ProtectedRoute>
+
+
+<Dashboard/>
+
+
+</ProtectedRoute>
+
+
+
+
+
+
+
+
+
+      <Portalsshow/>
+      <Profile/>
+      <Router>
+        <Routes>
+          <Route path="/" element={
+            <Suspense fallback={<Loader />}>
+              <Home />
+            </Suspense>
+          } />
+          <Route path="/profile" element={
+            <Suspense fallback={<Loader />}>
+              <Profile />
+            </Suspense>
+          } />
+        </Routes>
+      </Router>
       
       <div className="app-header">
         <Poster />
